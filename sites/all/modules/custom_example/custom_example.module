@@ -1,0 +1,9 @@
+<?php
+function custom_example_menu() {
+  $items['custom_example/form'] = array(
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('custom_example_form'),
+    'access arguments' => array('administer mymodule'),
+    'modal' => TRUE, // This line is where the magic happens.
+  );
+}
